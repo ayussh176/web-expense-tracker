@@ -32,7 +32,7 @@ const ExpenseList: React.FC = () => {
                     className="border-b border-expense-dark/10 dark:border-gray-700"
                   >
                     <td className="py-3 px-4">{expense.name}</td>
-                    <td className="py-3 px-4">${expense.amount.toFixed(2)}</td>
+                    <td className="py-3 px-4">₹{expense.amount.toFixed(2)}</td>
                     <td className="py-3 px-4">{expense.category}</td>
                     <td className="py-3 px-4">
                       <Button

@@ -32,7 +32,7 @@ const ExpenseChart: React.FC = () => {
           <>
             <div className="text-center mb-4">
               <div className="text-sm text-gray-500 dark:text-gray-400">Total Expenses</div>
-              <div className="text-2xl font-bold">${totalExpenses.toFixed(2)}</div>
+              <div className="text-2xl font-bold">₹{totalExpenses.toFixed(2)}</div>
             </div>
             <div className="flex-1 min-h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -51,7 +51,7 @@ const ExpenseChart: React.FC = () => {
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
-                  <Tooltip formatter={(value) => `$${Number(value).toFixed(2)}`} />
+                  <Tooltip formatter={(value) => `₹${Number(value).toFixed(2)}`} />
                   <Legend />
                 </PieChart>
               </ResponsiveContainer>
